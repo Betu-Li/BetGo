@@ -7,7 +7,7 @@ import (
 // HandlerFunc defines the request handler used by BetGo
 //
 // 用于定义路由映射的处理方法
-type HandlerFunc func(response http.ResponseWriter, request *http.Request)
+type HandlerFunc func(c *Context)
 
 // Engine implements the interface of ServeHTTP
 type Engine struct {

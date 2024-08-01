@@ -35,6 +35,11 @@ func (c *Context) PostForm(key string) string {
 	return c.Req.FormValue(key)
 }
 
+// Query gets a query parameter.
+func (c *Context) Query(key string) string {
+	return c.Req.URL.Query().Get(key)
+}
+
 // Status sets the HTTP response code.
 func (c *Context) Status(code int) {
 	c.StatusCode = code
